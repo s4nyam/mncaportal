@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>MNCA portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    h2 {
+      margin-top: 0;
+      color: #666;
+    }
+
+    #text-section,
+    #image-section,
+    #links-section {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .link {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: #333;
+      text-decoration: none;
+      border: 1px solid #333;
+      padding: 5px;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    .link:hover {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .link-icon {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+    }
+
+    .twitter-tweet {
+      margin-top: 20px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Multi Neighborhood Cellular Automata Portal</h1>
+    <div id="text-section">
+      <h2>What is MNCA portal?</h2>
+      <p>MNCA portal is a supporting dashboard for the NMI paper - "Paper title"</p>
+      <p>Here you will find all code and material to reproduce the paper work. It is divided into multiple parts. Each part corresponds to a Google Colab notebook where you can create your own version of code and run all cells.</p>
+    </div>
+    
+    <div id="image-section">
+      <h2>Some results from EvoMNCA</h2>
+      <div class="project-image">
+        <img src="o1.gif" alt="Project Image 1">
+      </div>
+      <div class="project-image">
+        <img src="o2.gif" alt="Project Image 2">
+      </div>
+      <div class="project-image">
+        <img src="o3.gif" alt="Project Image 3">
+      </div>
+      <div class="project-image">
+        <img src="o4.gif" alt="Project Image 1">
+      </div>
+      <div class="project-image">
+        <img src="o5.gif" alt="Project Image 1">
+      </div>
+      <div class="project-image">
+        <img src="o6.gif" alt="Project Image 1">
+      </div>
+    </div>
+    
+    <div id="links-section">
+      <h2>Links</h2>
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/18YSGHCSCL2FUwQeg4f17D8NKCng0gRx4?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part1: Binary FHCG MNCA Google Colab
+      </a>
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/1r-_V259fYFfNiGFwI7WuMfTkzNMExaZt?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part2: Multi State FHCG MNCA Google Colab
+      </a>
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/1FnmolWQYHgAOMQ7P_HsVSOJ4wLyL0a8z?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part3: Elementary CA Generalised Thresholding
+      </a>
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/1KNN_wipvr2Pphzru1TidquCCvgMC0tmF?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part4: Elementary CA Auto-Thresholding
+      </a>
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/1TTikw0Dyl9jNqNsIrF5sNUcrqu3XZzv2?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">ECA Genearlised-Thresholding Dataset Creator Notebook
+      </a>
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/1__dD1oP195hBr6cZuD3b8EP-QvtJSlKs?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">ECA Auto-Thresholding Dataset Creator Notebook
+      </a>
+      <br/>
+      <a class="link" href="https://drive.google.com/file/d/1x19cl_hXxYJRKa76kGfdtkkGq3S6zy7s/view?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png" alt="Google Colab">  ECA Generalised Dataset Zip (2.55GB)
+      </a>
+      <br/>
+      <a class="link" href="https://drive.google.com/file/d/1LlW12iMuRFFU_fGtBssftDjIZvjZjLBS/view?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png" alt="Google Colab">  ECA Auto-Thresholding Dataset (400 MB)
+      </a>
+      <br/>
+      <a class="link" href="https://drive.google.com/file/d/1JWfTkCuYCaOx0PKrjUZAks87DKPQSezM/view?usp=drive_link" target="_blank">
+        <img class="link-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png" alt="Google Colab">  ECA Auto-Thresholding Dataset Minimum Equivalence (30 MB)
+      </a>
+      <br/>
+      <a class="link" href="https://ecacg.netlify.com/" target="_blank">
+        1D CA generalised portal
+      </a>
+      <br/>
+      <a class="link" href="https://s4nyam.github.io/eca88/" target="_blank"> <img class="link-icon" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="Google Colab">
+        1D CA Auto Thresholding ME88 portal
+      </a>
+      <!-- https://cdn-icons-png.flaticon.com/512/25/25231.png -->
+      <br/>
+      <a class="link" href="https://drive.google.com/file/d/1ZIAChxOAXl_8QUHZLtnAdhhwJuaj5KJw/view?usp=sharing" target="_blank">
+        <img class="link-icon" src="https://www.citypng.com/public/uploads/preview/pdf-file-document-red-icon-png-11664499159d22efvkxoy.png?v=2023053123" alt="Google Colab">  Poster Presentation at Tromsø
+      </a>
+      <br/>
+      <a class="link" href="https://slackermanz.com/understanding-multiple-neighborhood-cellular-automata/" target="_blank">
+        slackermanz's portal (ref)
+      </a>
+      <br/>
+      <a class="link" href="https://twitter.com/s4nyam/status/1663472049711460352?s=20" target="_blank"><img class="link-icon" src="https://static.vecteezy.com/system/resources/previews/018/930/745/original/twitter-logo-twitter-icon-transparent-free-free-png.png" alt="Google Colab">
+       Tweet about poster presentation
+      </a>
+      <!-- https://static.vecteezy.com/system/resources/previews/018/930/745/original/twitter-logo-twitter-icon-transparent-free-free-png.png -->
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Ready with the poster for NORA 2023 Tromsø conference🚀 with <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> and Aarati.
+        <a href="https://twitter.com/NORAdotAI?ref_src=twsrc%5Etfw">@NORAdotAI</a>
+        <a href="https://t.co/hL4qHkx6ZP">pic.twitter.com/hL4qHkx6ZP</a></p>
+        &mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1663472049711460352?ref_src=twsrc%5Etfw">May 30, 2023</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/1TvAedU5siTHMt7lj8Z1_e0Nanl76KPda?usp=sharing" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Evolve new rules using DEFLATE as fitness for Genetic Algorithm
+      </a>
+      <br/>
+      <a class="link" href="https://colab.research.google.com/drive/1-GGpMqtfjYyRgg8EXpaRUKCyHKi9lnTZ?usp=sharing" target="_blank">
+        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Visualise Evolved rules
+      </a>
+      <br/>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Google_Drive_logo.png/800px-Google_Drive_logo.png -->
