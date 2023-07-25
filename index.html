@@ -4,6 +4,39 @@
   <meta charset="UTF-8">
   <title>MNCA portal</title>
   <style>
+
+/* Styles for the citation container */
+#citation-container {
+      position: relative;
+    }
+
+    /* Styles for the citation box */
+    #citation-box {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      resize: none;
+      width: 100%;
+      min-height: 100px;
+      font-family: "Arial", sans-serif;
+    }
+
+    /* Styles for the copy button */
+    #copy-btn {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      cursor: pointer;
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
+
+
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -196,11 +229,52 @@
       </blockquote>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       
-      <br/>
+      <br/><br/>
       
-      
+      <div id="citation-container">
+        <!-- Citation box -->
+        <textarea id="citation-box" readonly></textarea>
+    
+        <!-- Copy button -->
+        <button id="copy-btn">&#x2398; Copy Citation</button>
+      </div>
+    
     </div>
   </div>
+
+
+  <script>
+    const copyBtn = document.getElementById('copy-btn');
+    const citationBox = document.getElementById('citation-box');
+
+    // Function to format date as dd-mm-yyyy
+    function formatDate(date) {
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0');
+      const year = date.getFullYear();
+      return `${day}-${month}-${year}`;
+    }
+
+    // Set the "Date Accessed" dynamically
+    const currentDate = new Date();
+    const formattedDate = formatDate(currentDate);
+    const citation = `@misc{s4nyamMNCAPortal,
+  author = {},
+  title = {{M}{N}{C}{A} portal --- s4nyam.github.io},
+  howpublished = {\\url{https://s4nyam.github.io/mncaportal/}},
+  year = {},
+  note = {[Accessed ${formattedDate}]},
+}`;
+    citationBox.textContent = citation;
+
+    // Copy to clipboard
+    copyBtn.addEventListener('click', () => {
+      citationBox.select();
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+      alert('Citation copied to clipboard!');
+    });
+  </script>
 </body>
 </html>
 
