@@ -47,7 +47,7 @@
       background-color: #f2f2f2;
     }
     .container {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       background-color: #fff;
       padding: 20px;
@@ -296,14 +296,50 @@
       <div class="project-image">
         <img src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part2.gif" alt="part2 demo gif">
       </div>
-
-
-     
       <br/>
+  
       <a class="link" href="https://colab.research.google.com/drive/1FnmolWQYHgAOMQ7P_HsVSOJ4wLyL0a8z?usp=drive_link" target="_blank">
         <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part3: Elementary CA Generalised Thresholding
       </a>
       <br/>
+      <h3>Following are the three sliders that can help you to tweak 1D CA Rules, Initial Percentage, and Threshold:</h3>
+
+      <p>
+          <strong>1D CA Rules:</strong> Ranging from 1 to 255 for 1D CA. All possible rules for 1D CA are downloaded and
+          displayed with a seed value of 1.
+      </p>
+  
+      <p>
+          <strong>Initial Percentage:</strong> The amount of alive pixels in the first iteration of the simulation. For
+          example, if the Initial percentage is 1, that means the CA will be initialized with only 1 pixel in the start. It
+          will be placed randomly but with seed=1 so that all time the CA is initialized the same. The values range from
+          initial_percentages = [1, 10, 20, 30, 40, 50].
+      </p>
+  
+      <p>
+          <strong>Threshold:</strong> It defines the alpha value that is discussed in the paper [Cisneros et al 2021]. This
+          value is displayed as a bar in the plots of the histogram and sets an alpha or threshold value up to which the
+          coarse blocks are considered and replaced with a binary value depending on its probabilistic appearance in the
+          volumetric information.
+      </p>
+  
+      <p>
+          The reason why the whole coarse graining goes white with a threshold being between the 0th bar and rest of the
+          bars, for example, with the configuration of rule 60, initial percentage 10, and threshold at the 13th number
+          slider, will show coarse graining filtered as normal and show all live pixels with FHCG working fine. However, if
+          you move the slider above, let's say at the 15th number, the coarse graining becomes white-out because at that
+          position the threshold is 0.45 and FHCG now includes whitespace as a majority or, in other words, the frequency of
+          the whitespace is in the majority and hence it is expected to have whiteout in most of the coarse-grained output.
+      </p>
+
+
+
+      <div class="project-image">
+        <img src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part3.gif" alt="part3 demo gif">
+      </div>
+      <br/>
+  
+
       <a class="link" href="https://colab.research.google.com/drive/1KNN_wipvr2Pphzru1TidquCCvgMC0tmF?usp=drive_link" target="_blank">
         <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part4: Elementary CA Auto-Thresholding
       </a>
