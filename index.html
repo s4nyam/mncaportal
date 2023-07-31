@@ -147,6 +147,7 @@
       pointer-events: none;
       transition: opacity 0.3s, bottom 0.3s;
       z-index: 1;
+      width: 300px;
     }
 
     .link:hover a {
@@ -189,6 +190,14 @@
       <div class="project-image">
         <img src="https://ia802701.us.archive.org/21/items/mnca-gifs/o6.gif" alt="Project Image 1">
       </div>
+
+      <blockquote class="twitter-tweet">
+        <p lang="en" dir="ltr">Ready with the poster for NORA 2023 Tromsø conference🚀 with <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> and Aarati.
+        <a href="https://twitter.com/NORAdotAI?ref_src=twsrc%5Etfw">@NORAdotAI</a>
+        <a href="https://t.co/hL4qHkx6ZP">pic.twitter.com/hL4qHkx6ZP</a></p>
+        &mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1663472049711460352?ref_src=twsrc%5Etfw">May 30, 2023</a>
+      </blockquote>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
     
     <div id="links-section">
@@ -200,20 +209,82 @@
         <a href="https://colab.research.google.com/drive/1TvAedU5siTHMt7lj8Z1_e0Nanl76KPda?usp=sharing" target="_blank">
           <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Evolve new rules using DEFLATE as fitness for Genetic Algorithm
         </a>
-        <div class="description-box">Description for Evolve new rules using DEFLATE as fitness for Genetic Algorithm</div>
+        <div class="description-box">Evolve new rules using Genetic Algorithm for Multi Neighborhood CA. This notebook provides end to end pipeline to use three known neoghborhoods and evolve complex MNCA rules. It starts with initial random rule and then mutate it so that best rule is selected based on DEFLATE fitness algorithm.</div>
       </div>
       <br/>
 
 
-      <a class="link" href="https://colab.research.google.com/drive/1-GGpMqtfjYyRgg8EXpaRUKCyHKi9lnTZ?usp=sharing" target="_blank">
-        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Visualise Evolved rules
-      </a>
+      <div class="link">
+        <a href="https://colab.research.google.com/drive/1-GGpMqtfjYyRgg8EXpaRUKCyHKi9lnTZ?usp=sharing" target="_blank">
+          <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Visualise Evolved rules
+        </a>
+        <div class="description-box">Copy and Paste evolved rules from the previous notebook to visualise the behaviour and save it as MP4 video or gif. 
+        </div>  
+        </div>
       <br/>
-      <a class="link" href="https://colab.research.google.com/drive/18YSGHCSCL2FUwQeg4f17D8NKCng0gRx4?usp=drive_link" target="_blank">
-        <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part1: Binary FHCG MNCA Google Colab
-      </a>
+
       
+      <div class="link">
+        <a href="https://colab.research.google.com/drive/18YSGHCSCL2FUwQeg4f17D8NKCng0gRx4?usp=drive_link" target="_blank">
+          <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part1: Binary FHCG MNCA Google Colab
+        </a>
+        
+        <div class="description-box">This colab notebook provides four sections to display Frequency Histogram Coarse Graining for evolved rule, Game of Life, High Life and Larger than Life rules. It is easy to extend it to other known complex rules. The program first downloads the necessary files, then sets the variables configuration as shwon below. Further it generates the HD version and FHCG version. Finally displays the results.
+        </div>  
+        </div>
       <br/>
+
+      <h2>Definition of the variables for setting the configuration</h2>
+
+      <p>
+          <strong>blocksize:</strong> Size of the block that is used for coarse graining. For example, a block size of 2 will
+          reduce the size of the grid to half, i.e., a 100x100 grid will reduce to 50x50. These values can range from 2 to 4,
+          in our implementation (shared parameter for the rest of the known rules).
+      </p>
+  
+      <p>
+          <strong>Thresholds:</strong> List of all thresholds that are considered for visualizations such that each threshold
+          has a horizontal line in the histogram.
+      </p>
+  
+      <p>
+          <strong>width:</strong> Grid size width, default 100 (shared parameter for the rest of the known rules).
+      </p>
+  
+      <p>
+          <strong>height:</strong> Grid size height, default 100 (shared parameter for the rest of the known rules).
+      </p>
+  
+      <p>
+          <strong>steps:</strong> Time steps for which the simulation of CA runs. For example, 9 steps equal 9 frames of
+          simulation with 9 respective updates (shared parameter for the rest of the known rules).
+      </p>
+  
+      <p>
+          <strong>initial_state_probability:</strong> The density of pixels populated initially for the starting frame.
+      </p>
+  
+      <p>
+          <strong>seed_value:</strong> This value initializes the random pixels for the board as same in simulations. Default
+          is 1, if changed, the behavior will be different. It preserves the states, so that the same pixel density could be
+          understood for histograms and FHCG (shared parameter for the rest of the known rules).
+      </p>
+  
+      <p>
+          <strong>maximum_plot_thresh_fhcg:</strong> This value decides the limit of the y-axis so as to skip extra high bars
+          to increase the readability of the FHCG plots (shared parameter for the rest of the known rules).
+      </p>
+  
+      <video width="400" height="200" controls>
+        <!-- Replace 'your-video.mp4' with the path to your video file -->
+        <source src="" type="video/mov">
+        <!-- You can add additional source elements for different video formats -->
+        <!-- For example, to support WebM format: -->
+        <!-- <source src="your-video.webm" type="video/webm"> -->
+        <!-- For older browsers, you can provide fallback content -->
+        Your browser does not support the video tag.
+    </video>
+    
       <a class="link" href="https://colab.research.google.com/drive/1r-_V259fYFfNiGFwI7WuMfTkzNMExaZt?usp=drive_link" target="_blank">
         <img class="link-icon" src="https://miro.medium.com/v2/resize:fit:256/0*zNcjWYiZcJgreZAs.png" alt="Google Colab">Part2: Multi State FHCG MNCA Google Colab
       </a>
@@ -269,13 +340,7 @@
        Tweet about poster presentation
       </a>
       <!-- https://static.vecteezy.com/system/resources/previews/018/930/745/original/twitter-logo-twitter-icon-transparent-free-free-png.png -->
-      <blockquote class="twitter-tweet">
-        <p lang="en" dir="ltr">Ready with the poster for NORA 2023 Tromsø conference🚀 with <a href="https://twitter.com/stenichele?ref_src=twsrc%5Etfw">@stenichele</a> and Aarati.
-        <a href="https://twitter.com/NORAdotAI?ref_src=twsrc%5Etfw">@NORAdotAI</a>
-        <a href="https://t.co/hL4qHkx6ZP">pic.twitter.com/hL4qHkx6ZP</a></p>
-        &mdash; Sanyam Jain (@s4nyam) <a href="https://twitter.com/s4nyam/status/1663472049711460352?ref_src=twsrc%5Etfw">May 30, 2023</a>
-      </blockquote>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      
       
       <br/><br/>
       
