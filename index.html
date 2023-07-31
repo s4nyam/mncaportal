@@ -159,6 +159,14 @@
       opacity: 1;
     }
 
+  /* Add the new styles for the hover effect */
+  .project-image img.enlarge-on-hover {
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+  }
+
+  .project-image img.enlarge-on-hover:hover {
+    transform: scale(1.2); /* Enlarge the image to 120% on hover */
+  }
   </style>
 </head>
 <body>
@@ -258,6 +266,11 @@
         <div class="description-box">This colab notebook provides four sections to display Binary states Frequency Histogram Coarse Graining for evolved rule, Game of Life, High Life and Larger than Life rules. It is easy to extend it to other known complex rules. The program first downloads the necessary files, then sets the variables configuration as shwon below. Further it generates the HD version and FHCG version. Finally displays the results.
         </div>  
         </div>
+
+      <div class="project-image">
+        <img class="enlarge-on-hover" src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part1.gif" alt="part1 demo gif">
+      </div>
+
       <br/>
 
       <h3>Definition of the variables for setting the configuration</h3>
@@ -302,10 +315,6 @@
       </p>
   
     
-      <div class="project-image">
-        <img src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part1.gif" alt="part1 demo gif">
-      </div>
-
 
 
 
@@ -320,7 +329,7 @@
       <br/>
 
       <div class="project-image">
-        <img src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part2.gif" alt="part2 demo gif">
+        <img class="enlarge-on-hover" src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part2.gif" alt="part2 demo gif">
       </div>
       <br/>
   
@@ -333,7 +342,12 @@
         <div class="description-box"> This colab notebook provides code for reproducing results for Elementary CA rules. It displays all 256 rules in the same notebook as displayed in the gif below. Moreover, corresponding FHCG diagram is also displayed. The portal also allows to tweak rule (from 1 to 256), initial perentages and FHCG thresholds.
         </div>  
         </div>
+
+      <div class="project-image">
+        <img class="enlarge-on-hover" src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part3.gif" alt="part3 demo gif">
+      </div>
       <br/>
+  
      
       <h3>Following are the three sliders that can help you to tweak 1D CA Rules, Initial Percentage, and Threshold:</h3>
 
@@ -365,13 +379,6 @@
           the whitespace is in the majority and hence it is expected to have whiteout in most of the coarse-grained output.
       </p>
 
-
-
-      <div class="project-image">
-        <img src="https://raw.githubusercontent.com/s4nyam/mncaportal/main/part3.gif" alt="part3 demo gif">
-      </div>
-      <br/>
-  
 
 
 
